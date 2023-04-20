@@ -1,4 +1,9 @@
 
+.preview::-webkit-scrollbar {
+    width: 0;
+}
+   
+
 .event-preview{
     position: fixed;
     top: 0;
@@ -9,9 +14,9 @@
     display: none;
     align-items: center;
     justify-content: center;
-    
     z-index: 9999;
     transition: 0.5s ease-in;
+    
 }
 
 
@@ -19,11 +24,10 @@
     display: none;
     padding:2rem;
     text-align: center;
-    
-    position: fixed;
-    margin: 0;
+    overflow-y: scroll;
+    padding-top: 50px;
     width: 100%;
-    
+    height: 100%;
     
 }
 
@@ -37,6 +41,7 @@
 }
 .event-preview .preview .event-img{
     position: relative;
+    top: 0;
     margin: auto;
     height: 450px;
     width: 55%;
@@ -63,7 +68,8 @@
 }
 
 .buy-button{
-    position: absolute;
+    position: relative;
+    
     left: 45%;
     width: 150px;
     height: 50px;
@@ -87,8 +93,6 @@
 }
 
 .close{
-    
-    
     width: 40px;
     height: 40px;
     
@@ -98,4 +102,143 @@
     
     color: white;
     font-size: 20px;
+}
+
+
+@media only screen and (min-width:1024px){
+    .event-preview .preview .event{
+        padding-top: 100px;
+    }
+    .event-preview .preview .event-img{
+        width: 55%;
+    }
+    .buy-button{
+        margin-top: 20px;
+    }
+    
+    .preview-head{
+        position: relative;
+        left: -15px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .event-preview .preview .event{
+        padding-top: 50px;
+    }
+    .event-preview .preview .event-img{
+        width: 130%;
+    }
+    .buy-button{
+        margin-top: 20px;
+    }
+    
+    .preview-head{
+        position: relative;
+        left: -15px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .event-preview{
+        height: 100vh;
+        width: 100%;
+        
+    }
+    .event-preview .preview .event{
+        flex-direction: column;
+        padding-left: 25px;
+    }
+    .event-preview .preview .event-img{
+        width: 80%;
+        margin-left: 80px;
+    }
+    .buy-button{
+        position: relative;
+        margin-top: 20px;
+        left: 40%;
+    }
+    
+    .preview-head{
+        
+        position: relative;
+        text-align: center;
+        left: 20px;
+    }
+    
+    .preview-decr{
+        text-align: justify;
+    }
+    .close i{
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+
+    .event-preview .preview .event{
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+    .event-preview .preview .event-img{
+        position: relative;
+        width: 112%;
+        height: 50%;
+        margin: 0;
+        top: 50px;
+    }
+    .event-details{
+        position: relative;
+        top: 50px;
+        padding: 0;
+        margin-right:-45px;
+    }
+    .preview-head{
+        position: relative;
+        left: 0;
+    }
+    .buy-button{
+        position: relative;
+        margin-top: 60px;
+        left: 30%;
+    }
+    .close{
+        position: relative;
+        top: -15px;
+    }
+    .close i{
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .event-preview .preview .event-img{
+        position: relative;
+        width: 115%;
+        
+    }
+    .buy-button{
+        position: relative;
+        margin-top: 60px;
+        left: 28%;
+    }
+    
+}
+
+@media only screen and (max-width: 320px) {
+    .event-preview .preview .event-img{
+        position: relative;
+        width: 120%;
+        
+    }
+    .buy-button{
+        position: relative;
+        margin-top: 60px;
+        left: 22%;
+    }
+    .preview-decr p{
+        font-size: 12px;
+        line-height: 20px;
+    }
 }

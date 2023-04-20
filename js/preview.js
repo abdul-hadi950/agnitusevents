@@ -17,14 +17,14 @@ document.querySelectorAll('.event-container .portfolio-overlay').forEach(event =
 });
 
 previewBoxes.forEach(close => {
-    close.querySelector('.fa-x').onclick = () => {
+    close.querySelector('.close').onclick = () => {
         close.classList.remove('active')
         previewContainer.style.display = 'none';
     }
 })
 
 previewBoxes.forEach(close => {
-    close.querySelector('.buy').onclick = () => {
+    close.querySelector('.buy-button').onclick = () => {
         close.classList.remove('active')
         previewContainer.style.display = 'none';
     }
