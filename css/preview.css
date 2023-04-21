@@ -203,6 +203,7 @@ li{
         position: relative;
         margin-top: 60px;
         left: 30%;
+        margin-left: -15px;
     }
     .close{
         position: relative;
