@@ -38,13 +38,14 @@
 .event-preview .preview .event{
     display: flex;
     flex-direction: row;
+    padding-top: 50px;
 }
 .event-preview .preview .event-img{
     position: relative;
     top: 0;
     margin: auto;
     height: 450px;
-    width: 55%;
+    width: 50%;
     display: flex;
     align-items: center;
     margin-right: 30px;
@@ -54,6 +55,10 @@
     height: 100%;
     width: 100%;
     border-radius: 20px;
+}
+
+.event-details{
+    width:100%;
 }
 .preview-head{
     color: white;
@@ -69,7 +74,7 @@
 
 .buy-button{
     position: relative;
-    
+    bottom:0;
     left: 45%;
     width: 150px;
     height: 50px;
@@ -79,11 +84,14 @@
     align-items: center;
     color: white;
     border-radius: 10px;
+    margin-bottom: 20px;
+    
 }
 
 .buy-button .buy{
     font-size: 16px;
     font-weight: 600;
+    padding: 16px;
 }
 
 .buy-button:hover{
@@ -104,22 +112,10 @@
     font-size: 20px;
 }
 
-
-@media only screen and (min-width:1024px){
-    .event-preview .preview .event{
-        padding-top: 100px;
-    }
-    .event-preview .preview .event-img{
-        width: 55%;
-    }
-    .buy-button{
-        margin-top: 20px;
-    }
-    
-    .preview-head{
-        position: relative;
-        left: -15px;
-    }
+li{
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 26px;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -153,9 +149,13 @@
         width: 80%;
         margin-left: 80px;
     }
+    .event-details{
+        padding-left: 20px;
+    }
     .buy-button{
         position: relative;
-        margin-top: 20px;
+        margin-top: 0;
+        margin-bottom: 50px;
         left: 40%;
     }
     
@@ -191,8 +191,8 @@
     .event-details{
         position: relative;
         top: 50px;
+        width: 112%;
         padding: 0;
-        margin-right:-45px;
     }
     .preview-head{
         position: relative;
@@ -234,7 +234,7 @@
     }
     .buy-button{
         position: relative;
-        margin-top: 60px;
+        bottom: 0;
         left: 22%;
     }
     .preview-decr p{

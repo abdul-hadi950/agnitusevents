@@ -1,7 +1,7 @@
 let previewContainer = document.querySelector('.event-preview');
 let previewBoxes = document.querySelectorAll('.preview ');
 
-document.querySelectorAll('.event-container .portfolio-overlay').forEach(event => {
+document.querySelectorAll('.portfolio-overlay').forEach(event => {
   event.onclick = () => {
     previewContainer.style.display = 'flex';
     let name = event.getAttribute('data-name');
@@ -24,7 +24,7 @@ previewBoxes.forEach(close => {
 })
 
 previewBoxes.forEach(close => {
-    close.querySelector('.buy-button').onclick = () => {
+    close.querySelector('.buy').onclick = () => {
         close.classList.remove('active')
         previewContainer.style.display = 'none';
     }
